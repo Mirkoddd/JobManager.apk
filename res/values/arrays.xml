@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="running_app_list_sort_method">
+        <item>@string/sort_process_start_time</item>
+        <item>@string/used_cpu</item>
+        <item>@string/used_ram</item>
+        <item>@string/sort_alphabet</item>
+    </string-array>
+    <string-array name="install_app_list_sort_method">
+        <item>@string/sort_package_size</item>
+        <item>@string/sort_alphabet</item>
+        <item>@string/sort_installed_time</item>
+    </string-array>
+    <string-array name="action_method">
+        <item>@string/action_switch</item>
+        <item>@string/action_exclude</item>
+        <item>@string/action_details</item>
+    </string-array>
+    <string-array name="action_method_value">
+        <item>switch</item>
+        <item>exclude</item>
+        <item>details</item>
+    </string-array>
+</resources>

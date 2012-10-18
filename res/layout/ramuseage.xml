@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res/com.sec.android.app.controlpanel">
+    <com.sec.android.touchwiz.widget.TwScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/all_details" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:text="@string/summary_memory" style="?android:attr/listSeparatorTextViewStyle" />
+            <LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@touchwiz:color/tw_color005" android:layout_gravity="bottom|right|center" android:id="@id/memory_available_text" android:paddingRight="13.329987dip" android:paddingBottom="4.669983dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/mem_percentage" android:paddingLeft="17.329987dip" android:paddingRight="17.329987dip" android:layout_width="fill_parent" android:layout_height="13.329987dip" android:max="100" android:progress="0" style="?android:attr/progressBarStyleHorizontal" />
+            </LinearLayout>
+            <TextView android:text="@string/clear_memory_title" style="?android:attr/listSeparatorTextViewStyle" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="329.32812dip">
+                <TextView android:textSize="17.329987sp" android:textColor="@touchwiz:color/tw_color001" android:id="@id/clear_memory_description_label" android:paddingLeft="13.329987dip" android:paddingTop="13.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clear_memory_description" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="17.329987dip" android:paddingRight="17.329987dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+                    <Button android:enabled="false" android:textAppearance="?android:textAppearanceMedium" android:textSize="16.0sp" android:layout_gravity="center" android:id="@id/clear_button" android:layout_width="232.0dip" android:layout_height="54.0dip" android:text="@string/clear_memory_button" android:shadowDx="-1.0" android:shadowDy="-1.0" android:shadowRadius="0.4" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.sec.android.touchwiz.widget.TwScrollView>
+</LinearLayout>

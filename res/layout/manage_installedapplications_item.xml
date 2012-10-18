@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/item_layout" android:paddingLeft="6.0dip" android:paddingTop="5.0dip" android:paddingRight="6.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/app_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="0.0dip" android:layout_marginRight="6.0dip" android:scaleType="fitCenter" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="22.0sp" android:textColor="@touchwiz:color/tw_color029" android:id="@id/app_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:singleLine="true" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true">
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_sub" android:layout_gravity="center_vertical" android:id="@id/app_size" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_sub" android:layout_gravity="center_vertical" android:id="@id/install_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:textSize="16.0sp" android:ellipsize="marquee" android:id="@id/delete" android:background="@drawable/pressed_button_reset" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="79.32999dip" android:layout_height="48.0dip" android:text="@string/delete" android:singleLine="true" android:shadowDx="-1.0" android:shadowDy="-1.0" android:shadowRadius="0.4" />
+    </LinearLayout>
+</LinearLayout>

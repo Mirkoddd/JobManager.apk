@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res/com.sec.android.app.controlpanel">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="#ff90e2f7" android:id="@id/title_1" android:paddingLeft="10.0px" android:paddingTop="10.0px" android:paddingBottom="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_title_1" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffa2a2a2" android:id="@id/content_1" android:paddingLeft="20.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_content_1" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffa2a2a2" android:id="@id/content_2" android:paddingLeft="20.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_content_2" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffa2a2a2" android:id="@id/content_3" android:paddingLeft="20.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_content_3" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffa2a2a2" android:id="@id/content_4" android:paddingLeft="20.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_content_4" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffa2a2a2" android:id="@id/content_5" android:paddingLeft="20.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_content_5" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffa2a2a2" android:id="@id/content_6" android:paddingLeft="20.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_content_6" />
+            <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="#ff90e2f7" android:id="@id/title_2" android:paddingLeft="10.0px" android:paddingTop="10.0px" android:paddingBottom="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_title_2" />
+            <TextView android:textSize="18.0sp" android:textColor="#ffa2a2a2" android:id="@id/content_7" android:paddingLeft="20.0px" android:paddingRight="10.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_content_7" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

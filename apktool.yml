@@ -1,0 +1,10 @@
+version: 1.5.0.5a056e3
+apkFileName: JobManager.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 2
+sdkInfo:
+  minSdkVersion: '8'
+  targetSdkVersion: '15'

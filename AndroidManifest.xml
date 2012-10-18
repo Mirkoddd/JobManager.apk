@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0" package="com.sec.android.app.controlpanel"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="com.sec.android.app.controlpanel.permission.EXCLUDE_MEMORY_CLEAN" />
+    <uses-permission android:name="com.sec.android.app.controlpanel.permission.HIDE_RUNNING_APP_LIST" />
+    <uses-permission android:name="com.sec.android.app.controlpanel.permission.MUST_BE_SHOW_RUNNING_APP_LIST" />
+    <uses-permission android:name="com.sec.android.app.controlpanel.permission.GET_INTENT_ACTION_AFTER_FORCESTOP" />
+    <uses-permission android:name="com.sec.android.app.controlpanel.permission.PRIVATE" />
+    <permission-group android:label="@string/app_name" android:name="com.sec.android.app.controlpanel.permission-group" android:protectionLevel="signatureOrSystem" android:description="@string/permgroupdesc_jobmanager" />
+    <permission android:name="com.sec.android.app.controlpanel.permission.PRIVATE" />
+    <permission android:label="@string/permission_label_EXCLUDE_MEMORY_CLEAN" android:name="com.sec.android.app.controlpanel.permission.EXCLUDE_MEMORY_CLEAN" android:permissionGroup="com.sec.android.app.controlpanel.permission-group" />
+    <permission android:label="@string/permission_label_MUST_BE_SHOW_RUNNING_APP_LIST" android:name="com.sec.android.app.controlpanel.permission.MUST_BE_SHOW_RUNNING_APP_LIST" android:permissionGroup="com.sec.android.app.controlpanel.permission-group" />
+    <permission android:label="@string/permission_label_HIDE_RUNNING_APP_LIST" android:name="com.sec.android.app.controlpanel.permission.HIDE_RUNNING_APP_LIST" android:permissionGroup="com.sec.android.app.controlpanel.permission-group" />
+    <permission android:label="@string/permission_label_GET_INTENT_ACTION_AFTER_FORCESTOP" android:name="com.sec.android.app.controlpanel.permission.GET_INTENT_ACTION_AFTER_FORCESTOP" android:protectionLevel="signature" android:permissionGroup="com.sec.android.app.controlpanel.permission-group" />
+    <application android:label="@string/app_name" android:icon="@drawable/icon" android:excludeFromRecents="true">
+        <activity android:theme="@*android:style/Theme.DeviceDefault.NoActionBar" android:name=".activity.JobManagerActivity" android:launchMode="singleInstance" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sec.android.app.controlpanel.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.RunningAppsListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.RamUseageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.InstalledAppsListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SummaryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.HelpActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".PackageIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_CHANGED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".service.BatteryMonitorService" />
+        <service android:name=".service.ControlPanelRemoteService" android:permission="com.sec.android.app.controlpanel.permission.PRIVATE">
+            <intent-filter>
+                <action android:name="com.sec.android.app.controlpanel.service.REMOTE_SERVICE" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.ProgramMonitorRemoteService">
+            <intent-filter>
+                <action android:name="com.sec.android.app.programmonitor.service.REMOTE_SERVICE" />
+                <action android:name="com.sec.android.app.programmonitor.service.REMOTE_SERVICE_STOP" />
+            </intent-filter>
+        </service>
+        <uses-library android:name="touchwiz" />
+        <uses-library android:name="sechardware" />
+    </application>
+</manifest>
