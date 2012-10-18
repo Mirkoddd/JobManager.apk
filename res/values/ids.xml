@@ -43,4 +43,5 @@
     <item type="id" name="monitoring_TextView">false</item>
     <item type="id" name="start_monitoring">false</item>
     <item type="id" name="stop_monitoring">false</item>
+    <item type="id" name="hsView">false</item>
 </resources>

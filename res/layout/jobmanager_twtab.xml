@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost android:id="@*android:id/tabhost" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <HorizontalScrollView android:id="@id/hsView" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TabWidget android:id="@*android:id/tabs" android:background="@*android:drawable/tw_ab_stacked_transparent_dark_holo" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+        <FrameLayout android:id="@*android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</TabHost>
